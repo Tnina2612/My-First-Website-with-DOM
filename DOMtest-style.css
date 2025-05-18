@@ -1,0 +1,360 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+#counter {
+    border: 1px solid;
+    border-radius: 5px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.502);
+    margin: auto;
+}
+
+#count {
+    display: block;
+    font-size: 5em;
+    text-align: center;
+    margin-top: -30px;
+}
+
+#btnContainer {
+    text-align: center;
+    padding: 10px;
+}
+
+.btn {
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: rgb(167, 217, 246);
+    border-radius: 5px;
+    font-size: 1em;
+    padding: 5px 10px;
+    transition: background-color 0.25s;
+}
+.btn:hover {
+    background-color: rgb(40, 183, 244);
+}
+
+#tempConvert {
+    text-align: center;
+    border: 1px solid;
+    border-radius: 5px;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.502);
+    margin: auto;
+    max-width: 350px;
+    /* padding-bottom: 10px; */
+}
+#textBox {
+    text-align: center;
+    font-size: 2em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 50%;
+    margin-bottom: 15px;
+}
+
+#diceRoller {
+    text-align: center;
+    border: 1px solid;
+    border-radius: 5px;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.502);
+    max-width: 450px;
+    margin: auto;
+}
+#rollBtn {
+    background-color: rgb(249, 100, 100);
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    transition: background-color 0.5s ease;
+}
+#rollBtn:hover {
+    background-color: rgb(240, 82, 82);
+}
+#numDice {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+#diceResult {
+    margin-bottom: 10px;
+}
+#diceImages img {
+    width: 100px;
+    margin: 10px;
+}
+
+#clockContainer {
+    margin: auto;
+    border: 1px solid;
+    border-radius: 5px;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.502);
+    max-width: 350px;
+    text-align: center;
+}
+#clock {
+    font-family: monospace;
+    font-size: 1.6rem;
+    border: 1px solid;
+    width: fit-content;
+    margin: auto;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#stopwatch {
+    font-family: monospace;
+    font-size: 1.6rem;
+    border: 1px solid;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.stopwatchBtn {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 70px;
+    padding-top: 3px;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    font-size: 1em;
+    color: white;
+    border-radius: 7px;
+    border: none;
+    transition: background-color 0.5s ease;
+}
+#startClockBtn {
+    background-color: rgb(88, 206, 88);
+}
+#stopClockBtn {
+    background-color: rgb(248, 26, 26);
+}
+#resetClockBtn {
+    background-color: rgb(74, 153, 244);
+}
+#startClockBtn:hover {
+    background-color: rgb(77, 180, 77);
+}
+#stopClockBtn:hover {
+    background-color: rgb(211, 23, 23);
+}
+#resetClockBtn:hover {
+    background-color: rgb(59, 122, 194);
+}
+
+#calculator {
+    display: grid;
+    grid-template-rows: 60px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: max-content;
+    margin: auto;
+    padding: 10px;
+    background-color: black;
+    border-radius: 5px;
+    justify-items: center;
+}
+#calculatorTextbox {
+    display: flex;
+    grid-column: 1 / -1;
+    height: 60px;
+    width: 300px;
+    margin: 0px;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: right;
+
+    pointer-events: none;  
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    background-color: rgb(71, 70, 70);
+    border: none;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3em;
+    color: white;
+}
+#calculator button {
+    border-radius: 50%;
+    border: none;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.25s;
+}
+.number, .dot, .equal {
+    background-color: rgb(104, 103, 103);
+}
+.number:hover, .dot:hover, .equal:hover {
+    background-color: rgb(82, 81, 81);
+}
+.number:active, .dot:active, .equal:active  {
+    background-color: rgb(147, 146, 146);
+}
+.operator {
+    background-color: orange;
+}
+.operator:hover {
+    background-color: rgb(248, 150, 38);
+}
+.operator:active {
+    background-color: rgb(251, 193, 127);
+}
+#del {
+    padding-left: 3px;
+    padding-bottom: 5px;
+    padding-left: 4px;
+}
+#delSymbol {
+    display: inline-block;
+    transform: scale(0.8);
+    transform-origin: center;
+}
+#C {
+    padding-top: 3px;
+    padding-left: 7px;
+}
+#subtract {
+    padding-bottom: 5px;
+    padding-left: 7px;
+}
+
+
+#rockpaperscissorGame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid;
+    border-radius: 5px;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.502);
+    max-width: 500px;
+    margin: auto;
+}
+
+#handChoices {
+    margin-bottom: 20px;
+}
+
+#handChoices button {
+    font-size: 3rem;
+    border: 2px solid;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 10px;
+
+    background-color: rgb(135, 219, 247);
+    transition: background-color 0.5s;
+}
+#handChoices button:hover {
+    background-color: rgb(67, 202, 248);
+} 
+
+#rock {
+    padding-bottom: 10px;
+}
+#paper {
+    padding-left: 10px;
+}
+
+#playerDisplay, #computerDisplay, .score {
+    font-size: 1.3em;
+}
+#resultDisplay {
+    margin-top: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#playerScore {
+    color: green;
+}
+#computerScore {
+    color: red;
+}
+
+
+
+.pokemonDisplay {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 500px;
+    margin: auto;
+    border: 1px solid;
+    border-radius: 5px;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.502);
+}
+
+.pokemonDisplay img {
+    width: 200px;
+}
+
+
+
+.weatherDisplay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    max-width: 500px;
+    border: 1px solid;
+    border-radius: 5px;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.502);
+    text-align: center;
+}
+
+.weatherForm input, .weatherForm button {
+    padding: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.weatherForm button {
+    background-color: rgb(116, 237, 116);
+    color: rgb(255, 255, 255);
+}
+.weatherForm button:hover {
+    background-color: rgb(7, 231, 7);
+}
+
+.weatherCard {
+    display: none;
+
+    width: 250px;
+    border: 1px solid;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background: linear-gradient(180deg, rgba(51, 189, 243, 0.564), rgba(250, 162, 0, 0.418));
+    font-weight: bold;
+}
+
+#weatherDescription {
+    font-style: italic;
+    margin: 0;
+}
+
+#weatherEmoji {
+    margin: 0;
+    font-size: 6rem;
+}
+
+#errorInput {
+    margin-top: 15px;
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website with DOM</title>
+    <link rel="stylesheet" href="DOMtest-style.css">
+</head>
+<body>
+    <h1 id="firsth1"></h1>
+    <p id="firstp"></p>
+
+    <label>Username:</label>
+    <input id="textbox">
+    <button id="submit">Submit</button>
+    <p id="greeting"></p>
+
+    <div id="counter">
+        <h2>Counter</h2>
+        <label id="count">0</label>
+        <div id="btnContainer">
+            <button id="decrease" class="btn">Decrement</button>
+            <button id="reset" class="btn">Reset</button>
+            <button id="increase" class="btn">Increment</button>
+        </div>
+    </div><br>
+
+    <form id="tempConvert">
+        <h2>Temperature Conversion</h2>
+        <input type="number" id="textBox" value="0"><br>
+
+        <input type="radio" id="toFah" name="unit">
+        <label for="toFah">Celcius to Fahrenheit</label><br>
+        <input type="radio" id="toCel" name="unit">
+        <label for="toCel">Fahrenheit to Celsius</label><br><br>
+
+        <button type="button" onclick="convert()">Submit</button>
+        <h3 id="result">Select an unit</h3>
+    </form><br>
+
+    <form id="diceRoller">
+        <h2>Dice Roller</h2>
+        <label>Number of dices:</label>
+        <input type="number" value="1" min="1" id="numDice">
+        <button type="button" onclick="roll()" id="rollBtn">Roll Dice</button>
+        <div id="diceResult">Type the number of dices and click "Roll Dice"</div>
+        <div id="diceImages"></div>
+    </form><br>
+
+    <div id="clockContainer">
+        <h2>Digital Clock</h2>
+        <p id="clock"></h2>
+        <h2>Stopwatch</h2>
+        <p id="stopwatch">00:00:00:00</p>
+        <button class="stopwatchBtn" id="startClockBtn" onclick="startClock()">Start</button>
+        <button class="stopwatchBtn" id="stopClockBtn" onclick="stopClock()">Stop</button>
+        <button class="stopwatchBtn" id="resetClockBtn" onclick="resetClock()">Reset</button>
+    </div><br>
+
+    <div id="calculator">
+        <input id="calculatorTextbox" readonly>
+
+        <button class="operator" onclick="appendDisplay('+')">+</button>
+        <button class="number" onclick="appendDisplay('7')">7</button>
+        <button class="number" onclick="appendDisplay('8')">8</button>
+        <button class="number" onclick="appendDisplay('9')">9</button>
+
+        <button class="operator" id="subtract" onclick="appendDisplay('-')">–</button>
+        <button class="number" onclick="appendDisplay('4')">4</button>
+        <button class="number" onclick="appendDisplay('5')">5</button>
+        <button class="number" onclick="appendDisplay('6')">6</button>
+
+        <button class="operator" onclick="appendDisplay('×')">×</button>
+        <button class="number" onclick="appendDisplay('1')">1</button>
+        <button class="number" onclick="appendDisplay('2')">2</button>
+        <button class="number" onclick="appendDisplay('3')">3</button>
+
+        <button class="operator" onclick="appendDisplay('÷')">÷</button>
+        <button class="number" onclick="appendDisplay('0')">0</button>
+        <button class="dot" onclick="appendDisplay('.')">.</button>
+        <button class="equal" onclick="calculate()">=</button>
+        
+        <button class="operator" id="C" onclick="clearDisplay()">C</button>
+        <button class="operator" id="del" onclick="del()"><span id="delSymbol">⌫</span></button>
+    </div><br>
+
+    <div id="rockpaperscissorGame">
+        <h2>Rock - Paper - Scissors</h2>
+        <div id="handChoices">
+            <button id="rock" onclick="playHand('rock')">👊</button>
+            <button id="paper" onclick="playHand('paper')">🖐️</button>
+            <button id="scissors" onclick="playHand('scissors')">✌️</button>
+        </div>
+
+        <div id="playerDisplay">Player:</div>
+        <div id="computerDisplay">Computer:</div>
+        <div id="resultDisplay"></div><br>
+
+        <div class="score"> Player's Score:
+            <span id="playerScore">0</span>
+        </div>
+        <div class="score"> Computer's Score:
+            <span id="computerScore">0</span>
+        </div><br>
+    </div><br>
+
+    <div class="pokemonDisplay">
+        <h2>Pokemon Sprites</h2>
+        <div>
+            <input id="pokemonName" type="text" placeholder="Name of Pokemon">
+            <button onclick="fetchPokemon()">Fetch Pokemon</button>
+        </div><br>
+        <img src="" alt="Pokemon Sprite" style="display: none;">
+    </div><br>
+
+    <div class="weatherDisplay">
+        <form class="weatherForm">
+            <h2>Weather Display</h2>
+            <input id="city" type="text" placeholder="Enter a city">
+            <button type="submit">Get Weather</button>
+        </form><br>
+    
+        <div class="weatherCard">
+            <h2 class="weatherInfo" id="cityDisplay">Ha Noi</h2>
+            <p class="weatherInfo" id="tempDisplay">Temperature: 90°F</p>
+            <p class="weatherInfo" id="humidityDisplay">Humidity: 75%</p>
+            <p class="weatherInfo" id="weatherDescription">Clear Skies</p>
+            <p class="weatherInfo" id="weatherEmoji">☀️</p>
+            <p id="errorInput">Please enter a valid city!</p>
+        </div>
+    </div>
+
+    <!-- The JS part should be placed at the end of <body> part 
+    to load HTML before sth went to error -->
+    <script src="DOMtest.js"></script>
+</body>
+</html>
